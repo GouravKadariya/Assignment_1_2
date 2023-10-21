@@ -5,9 +5,15 @@ public class Triangle {
 
     private Point vertex3;
 
-    public Triangle(Point vertex1, Point vertex2, Point vertex3) {
+    public void setVertex1(Point vertex1) {
         this.vertex1 = vertex1;
+    }
+
+    public void setVertex2(Point vertex2) {
         this.vertex2 = vertex2;
+    }
+
+    public void setVertex3(Point vertex3) {
         this.vertex3 = vertex3;
     }
 
