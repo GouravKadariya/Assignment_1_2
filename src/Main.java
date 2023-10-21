@@ -4,6 +4,7 @@ import java.util.Scanner;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
 
+    // input taken from user
     static double getUserInput(String message) {
         boolean input = false;
         double userInput = 0;
@@ -20,6 +21,7 @@ public class Main {
         return userInput;
     }
 
+    // triangles data set
     static void setTriangleDetails(Triangle[] triangles) {
         for (int i = 0; i < triangles.length; i++) {
             System.out.printf("Input information for Triangle %d\n", i + 1);
@@ -47,6 +49,7 @@ public class Main {
         }
     }
 
+    // function to calculate distance between two points
     public static double getDistanceBetweenVertex(Point point1, Point point2) {
         return Math.sqrt(
                 Math.pow(point2.getX() - point1.getX(), 2)
@@ -55,6 +58,7 @@ public class Main {
         );
     }
 
+    // function to calculate perimeter and checking isosceles
     public static void calculatePerimeterAndCheckIsosceles(Triangle triangle) {
         double side1Length = getDistanceBetweenVertex(triangle.getVertex1(), triangle.getVertex2());
         double side2Length = getDistanceBetweenVertex(triangle.getVertex2(), triangle.getVertex3());
@@ -68,6 +72,7 @@ public class Main {
         System.out.printf("Perimeter: %f %s\n", perimeter, isoscelesMessage);
     }
 
+    // taking user input
     static int getTotalTriangleInputNum() {
         System.out.println("How many triangle?");
         boolean input = false;
@@ -89,6 +94,7 @@ public class Main {
         return count;
     }
 
+    // main method
     public static void main(String[] args) {
         int size = getTotalTriangleInputNum();
         Triangle[] triangles = new Triangle[size];
